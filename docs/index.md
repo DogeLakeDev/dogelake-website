@@ -3,7 +3,7 @@ layout: home
 hero:
   name: "DogeLake-东方犬明湖"
   text: "服务器官网"
-  tagline: <p id="json-data">加载中...</p>
+  tagline: <div id="json-data">加载中...</div>
   image:
     src: /DOGELAKE_1024x.png
     alt: DOGELAKE
