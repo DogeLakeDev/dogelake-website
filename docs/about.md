@@ -9,60 +9,59 @@ import {
   VPTeamMembers
 } from 'vitepress/theme'
 
+const klpbbs =  {svg:'<svg xmlns="http://www.w3.org/2000/svg" width="1.01em" height="1em" viewBox="0 0 1025 1024"><path fill="currentColor" d="M896.428 1024h-768q-53 0-90.5-37.5T.428 896V128q0-53 37.5-90.5t90.5-37.5h768q53 0 90.5 37.5t37.5 90.5v768q0 53-37.5 90.5t-90.5 37.5m0-832h-256v256h-256V192h-256v256h256v128h-128v256h128V704h256v128h128V576h-128V448h256z"/></svg>'};
+
+const bilibili = {svg: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M17.813 4.653h.854q2.266.08 3.773 1.574Q23.946 7.72 24 9.987v7.36q-.054 2.266-1.56 3.773c-1.506 1.507-2.262 1.524-3.773 1.56H5.333q-2.266-.054-3.773-1.56C.053 19.614.036 18.858 0 17.347v-7.36q.054-2.267 1.56-3.76t3.773-1.574h.774l-1.174-1.12a1.23 1.23 0 0 1-.373-.906q0-.534.373-.907l.027-.027q.4-.373.92-.373t.92.373L9.653 4.44q.107.106.187.213h4.267a.8.8 0 0 1 .16-.213l2.853-2.747q.4-.373.92-.373c.347 0 .662.151.929.4s.391.551.391.907q0 .532-.373.906zM5.333 7.24q-1.12.027-1.88.773q-.76.748-.786 1.894v7.52q.026 1.146.786 1.893t1.88.773h13.334q1.12-.026 1.88-.773t.786-1.893v-7.52q-.026-1.147-.786-1.894t-1.88-.773zM8 11.107q.56 0 .933.373q.375.374.4.96v1.173q-.025.586-.4.96q-.373.375-.933.374c-.56-.001-.684-.125-.933-.374q-.375-.373-.4-.96V12.44q0-.56.386-.947q.387-.386.947-.386m8 0q.56 0 .933.373q.375.374.4.96v1.173q-.025.586-.4.96q-.373.375-.933.374c-.56-.001-.684-.125-.933-.374q-.375-.373-.4-.96V12.44q.025-.586.4-.96q.373-.373.933-.373"/></svg>'};
+
+const download = {svg:'<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>'}
 const members = [
     {
     avatar: 'https://q1.qlogo.cn/g?b=qq&nk=368364534&s=100',
-    name: '1',
+    name: '体委（）',
     title: '服主',
     links: [
-      { icon: 'github', link: 'https://github.com/yyx990803' },
-      { icon: 'bilibili', link: 'https://twitter.com/youyuxi' }
+      { icon: 'github', link: 'https://github.com/ENIACJushi/' },
+      { icon: klpbbs, link: 'https://klpbbs.com/space-uid-277188.html' },
+      { icon: bilibili, link: 'https://space.bilibili.com/83539357' }
     ]
   },
     {
     avatar: 'https://q1.qlogo.cn/g?b=qq&nk=954853616&s=100',
-    name: '1',
-    title: '服主',
+    name: '安普反物质',
+    title: '拉腐竹进MC巨坑，服务器诞生前和腐竹一起建设，你服第一位管理，现任人民服务员（',
     links: [
-      { icon: 'github', link: 'https://github.com/yyx990803' },
-      { icon: 'bilibili', link: 'https://twitter.com/youyuxi' }
+      { icon: bilibili, link: 'https://b23.tv/uYr3WsD' }
     ]
   },
     {
     avatar: 'https://q1.qlogo.cn/g?b=qq&nk=1156592371&s=100',
-    name: '1',
-    title: '服主',
-    links: [
-      { icon: 'github', link: 'https://github.com/yyx990803' },
-      { icon: 'bilibili', link: 'https://twitter.com/youyuxi' }
-    ]
+    name: 'piAno',
+    title: '潜水 快毕业了在找工作',
+    links: []
   },
     {
     avatar: 'https://q1.qlogo.cn/g?b=qq&nk=3575057858&s=100',
-    name: '1',
-    title: '服主',
+    name: '不拖更（确信）',
+    title: '工程管理/活动策划' + '\n' + '“对于我而言，犬明湖就像是第二个家”' + '\n' + '没什么可贴的链接还是给大家整点福利吧' + '\n' + '另外求求你们来玩犬明湖，只要是我能做到的我什么都愿意做！',
     links: [
-      { icon: 'github', link: 'https://github.com/yyx990803' },
-      { icon: 'bilibili', link: 'https://twitter.com/youyuxi' }
+      { icon: download, link: 'https://vlink.cc/yuzho' }
     ]
   },
     {
     avatar: 'https://q1.qlogo.cn/g?b=qq&nk=2131595226&s=100',
-    name: '1',
-    title: '服主',
+    name: 'Shiroha.7z（七罪）',
+    title: '喜欢吃，设计，打游戏，然后很懒。',
     links: [
-      { icon: 'github', link: 'https://github.com/yyx990803' },
-      { icon: 'bilibili', link: 'https://twitter.com/youyuxi' }
+      { icon: 'github', link: 'https://github.com/Tanya7z' },
+      { icon: bilibili, link: 'https://b23.tv/4DN4nP1' },
+      { icon: klpbbs, link: 'https://www.minebbs.com/members/6587/' },
     ]
   },
     {
     avatar: 'https://q1.qlogo.cn/g?b=qq&nk=1920749072&s=100',
-    name: '1',
-    title: '服主',
-    links: [
-      { icon: 'github', link: 'https://github.com/yyx990803' },
-      { icon: 'bilibili', link: 'https://twitter.com/youyuxi' }
-    ]
+    name: 'HeyBiblee',
+    title: 'Robot大使兼服务器运维',
+    links: []
   },
 ]
 </script>
@@ -100,3 +99,8 @@ const members = [
     :members="members"
   />
 </VPTeamPage>
+
+## 捐赠
+![donation](/Donation.jpg)  
+
+作者/Shiroha.7z
