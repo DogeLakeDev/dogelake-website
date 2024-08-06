@@ -1,13 +1,11 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
 hero:
   name: "DogeLake-东方犬明湖"
   text: "服务器官网"
-  tagline: <div id="json-data">加载中...</div>
+  tagline: <p id="json-data">加载中...</p>
   image:
-    src: img/DOGELAKE_1024x.png
+    src: /DOGELAKE_1024x.png
     alt: DOGELAKE
   actions:
     - theme: brand
@@ -15,7 +13,7 @@ hero:
       link: /startplay
     - theme: alt
       text: 卫星地图
-      link: https://map.dogelake.cn/map
+      link: http://map.dogelake.cn/map
     - theme: alt
       text: 地图画自助上传
       link: /map
@@ -38,16 +36,20 @@ features:
     details: 客户端/启动器（DEMO）下载！
     link: /client
 ---
-<script>
-    fetch('https://motdbe.blackbe.work/api?host=play.dogelake.cn:29033')
-        .then(response => response.json())
-        .then(data => {
-            const online = data['online'];
-            const max = data['max'];
-            const version = data['version'];
-            document.getElementById('json-data').innerText = version + " " + online + "/" + max;
-        })
-        .catch(error => {
-            
-        });
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  fetch('https://motdbe.blackbe.work/api?host=play.dogelake.cn:29033')
+    .then(response => response.json())
+    .then(data => {
+      const online = data['online']
+      const max = data['max']
+      const version = data['version']
+      document.getElementById('json-data').innerText = version + " " + online + "/" + max
+    })
+    .catch(error => {
+      console.error('Error loading JSON data:', error)
+    })
+})
 </script>

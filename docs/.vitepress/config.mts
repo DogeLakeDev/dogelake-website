@@ -3,14 +3,15 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "DogeLake-东方犬明湖",
   description: "服务器官网",
+  head: [['link', { rel: 'icon', href: '/favicon.png' }]],
   lang: 'zh-CN',
   lastUpdated: true,
   themeConfig: {
-    logo: 'img/favicon.png',
+    logo: '/favicon.png',
     nav: [
       { text: '主页', link: '/' },
       { text: '开始游戏', link: '/startplay' },
-      { text: '卫星地图', link: 'https://map.dogelake.cn/map' },
+      { text: '卫星地图', link: 'http://map.dogelake.cn/map' },
       { text: '地图画自助上传', link: '/map' },
       { text: '宣传信息', link: '/publicity' },
       { text: '画廊', link: '/gallery' },
