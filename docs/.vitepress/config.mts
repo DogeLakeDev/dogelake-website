@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, type DefaultTheme } from 'vitepress'
 
 export default defineConfig({
   title: "DogeLake-东方犬明湖",
@@ -8,34 +8,30 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     logo: '/favicon.png',
-    nav: [
-      { text: '主页', link: '/' },
-      { text: '开始游戏', link: '/startplay' },
-      { text: '卫星地图', link: 'http://map.dogelake.cn/map' },
-      { text: '地图画自助上传', link: '/map' },
-      { text: '宣传信息', link: '/publicity' },
-      { text: '画廊', link: '/gallery' },
-      { text: '更新日志', link: '/updatelog' },
-      { text: '客户端', link: '/client' },
-      { text: '关于', link: '/about' },
-    ],
+    nav: [ ],
 
-    sidebar: [
-      {
-        text: '菜单',
-        items: [
-      { text: '主页', link: '/' },
-      { text: '开始游戏', link: '/startplay' },
-      { text: '卫星地图', link: 'https://map.dogelake.cn/map' },
-      { text: '地图画自助上传', link: '/map' },
-      { text: '宣传信息', link: '/publicity' },
-      { text: '画廊', link: '/gallery' },
-      { text: '更新日志', link: '/updatelog' },
-      { text: '客户端', link: '/client' },
-      { text: '关于', link: '/about' },
-        ]
-      }
-    ],
+    sidebar:  sidebarGuide(),
+    // [
+    //   {
+    //     text: '菜单',
+    //     items: [
+    //   { text: '主页', link: '/' },
+
+    //   { text: '开始游戏', link: '/startplay' },
+    //   { text: '客户端', link: '/guide/client' },
+
+    //   { text: '卫星地图', link: 'https://map.dogelake.cn/map' },
+    //   { text: '地图画自助上传', link: '/map' },
+
+    //   { text: '宣传信息', link: '/publicity' },
+    //   { text: '更新日志', link: '/updatelog' },
+      
+    //   { text: '画廊', link: '/gallery' },
+
+    //   { text: '关于', link: '/about' },
+    //     ]
+    //   }
+    // ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Tanya7z/DogeLake-Website' },
@@ -51,3 +47,42 @@ export default defineConfig({
     }
   }
 })
+
+function sidebarGuide(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: '返回主页', link: '/' },
+    {
+      text: '导引',
+      collapsed: false,
+      items: [
+        { text: '开始游戏', link: '/guide/startplay' },
+        { text: '基本游玩规范', link: '/guide/rules' }
+      ]
+    },
+    // {
+    //   text: '帮助',
+    //   collapsed: true,
+    //   items: [
+    //     { text: '基本游玩规范', link: '/help/basic' }
+    //   ]
+    // },
+    {
+      text: '实用工具',
+      collapsed: false,
+      items: [
+        { text: '卫星地图', link: 'https://map.dogelake.cn/map' },
+        { text: '地图画自助上传', link: '/tools/map' }
+      ]
+    },
+    {
+      text: '管理事务',
+      collapsed: false,
+      items: [
+        { text: '管理守则', link: '/admin/op' },
+        { text: '更新日志', link: '/admin/updatelog' },
+      ]
+    },
+    { text: '宣传信息', link: '/others/publicity' },
+    { text: '关于', link: '/others/about' },
+  ]
+}
