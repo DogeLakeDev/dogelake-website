@@ -56,12 +56,19 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: '开始游戏', link: '/guide/startplay' },
-        { text: '客户端', link: '/guide/client' }
+        { text: '基本游玩规范', link: '/guide/rules' }
       ]
     },
+    // {
+    //   text: '帮助',
+    //   collapsed: true,
+    //   items: [
+    //     { text: '基本游玩规范', link: '/help/basic' }
+    //   ]
+    // },
     {
       text: '实用工具',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '卫星地图', link: 'https://map.dogelake.cn/map' },
         { text: '地图画自助上传', link: '/tools/map' }
@@ -69,7 +76,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     },
     {
       text: '管理事务',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '管理守则', link: '/admin/op' },
         { text: '更新日志', link: '/admin/updatelog' },
