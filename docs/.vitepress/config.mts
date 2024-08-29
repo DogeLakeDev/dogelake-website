@@ -18,7 +18,7 @@ export default defineConfig({
     //   { text: '主页', link: '/' },
 
     //   { text: '开始游戏', link: '/startplay' },
-    //   { text: '客户端', link: '/client' },
+    //   { text: '客户端', link: '/guide/client' },
 
     //   { text: '卫星地图', link: 'https://map.dogelake.cn/map' },
     //   { text: '地图画自助上传', link: '/map' },
@@ -56,7 +56,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: '开始游戏', link: '/startplay' },
-        { text: '客户端', link: '/client' }
+        { text: '客户端', link: '/guide/client' }
       ]
     },
     {

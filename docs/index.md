@@ -34,7 +34,7 @@ features:
   - icon: ⚒️
     title: 客户端
     details: 客户端/启动器（DEMO）下载！
-    link: /client
+    link: /guide/client
 ---
 <script setup>
 import { onMounted } from 'vue'
