@@ -101,6 +101,6 @@ const members = [
 </VPTeamPage>
 
 ## 捐赠
-![donation](/Donation.jpg)  
+![donation](../public/Donation.jpg)  
 
 作者/Shiroha.7z

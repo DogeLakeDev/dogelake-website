@@ -55,7 +55,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '导引',
       collapsed: false,
       items: [
-        { text: '开始游戏', link: '/startplay' },
+        { text: '开始游戏', link: '/guide/startplay' },
         { text: '客户端', link: '/guide/client' }
       ]
     },
@@ -64,18 +64,18 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: true,
       items: [
         { text: '卫星地图', link: 'https://map.dogelake.cn/map' },
-        { text: '地图画自助上传', link: '/map' }
+        { text: '地图画自助上传', link: '/tools/map' }
       ]
     },
     {
       text: '管理事务',
       collapsed: true,
       items: [
-        { text: '管理守则', link: '/op' },
-        { text: '更新日志', link: '/updatelog' },
+        { text: '管理守则', link: '/admin/op' },
+        { text: '更新日志', link: '/admin/updatelog' },
       ]
     },
-    { text: '宣传信息', link: '/publicity' },
-    { text: '关于', link: '/about' },
+    { text: '宣传信息', link: '/others/publicity' },
+    { text: '关于', link: '/others/about' },
   ]
 }
