@@ -71,7 +71,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: '卫星地图', link: 'https://map.dogelake.cn/map' },
-        { text: '地图画自助上传', link: '/tools/map' }
+        { text: '地图画自助上传', link: '/tools/map' },
+        { text: '神秘链接', link: '/toola/links' },
       ]
     },
     {
