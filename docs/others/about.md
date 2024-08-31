@@ -18,7 +18,7 @@ const members = [
     {
     avatar: 'https://q1.qlogo.cn/g?b=qq&nk=368364534&s=100',
     name: '体委（）',
-    title: '服主',
+    title: '这是个野服',
     links: [
       { icon: 'github', link: 'https://github.com/ENIACJushi/' },
       { icon: klpbbs, link: 'https://klpbbs.com/space-uid-277188.html' },
