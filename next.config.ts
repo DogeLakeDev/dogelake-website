@@ -1,10 +1,12 @@
 import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
-  // Skip API routes for static export — removed in CI before build
+}
+
+if (process.env.STATIC_EXPORT === "true") {
+  nextConfig.output = "export"
 }
 
 export default nextConfig
