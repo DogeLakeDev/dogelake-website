@@ -192,7 +192,6 @@ const MapView = forwardRef<MapViewHandle>((_, ref) => {
             coordinateFormat: createStringXY(0),
             projection: dataProjection,
             className: "ol-custom-mouse-position",
-            undefinedHTML: " ",
           }),
         ],
         layers: [unminedLayer],
