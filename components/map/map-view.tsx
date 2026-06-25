@@ -3,7 +3,7 @@
 import { useEffect, useRef, forwardRef, useImperativeHandle } from "react"
 
 const PROXY = "/api/map-proxy"
-const ASSETS = "/map-assets"
+const ASSETS = "/map/assets/"
 
 // Preload pixel fonts
 if (typeof document !== "undefined") {
@@ -221,7 +221,7 @@ const MapView = forwardRef<MapViewHandle>((_, ref) => {
           const style = new Style()
           if (item.image) {
             style.setImage(new Icon({
-              src: item.image === "steve.png" ? `${ASSETS}/img/map/player.png` : item.image,
+              src: item.image === "steve.png" ? `${ASSETS}/icon/player.png` : item.image,
               anchor: item.imageAnchor || [0.5, 0.5], scale: item.imageScale || 1,
             }))
           }

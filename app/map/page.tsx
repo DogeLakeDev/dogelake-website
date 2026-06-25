@@ -5,7 +5,7 @@ import Navigation from "@/components/layouts/navigation"
 import MapView, { type MapViewHandle } from "@/components/map/map-view"
 import MapSidebar from "@/components/map/map-sidebar"
 
-const ASSETS = "/map-assets"
+const ASSETS = "/map/assets"
 
 export default function MapPage() {
   const mapRef = useRef<MapViewHandle>(null)
