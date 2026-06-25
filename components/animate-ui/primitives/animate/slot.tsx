@@ -81,9 +81,10 @@ function Slot<T extends HTMLElement = HTMLElement>({
   const { ref: childRef, ...childProps } = children.props as AnyProps;
 
   const mergedProps = mergeProps(childProps, props);
+  (mergedProps as any).ref = mergeRefs(childRef as React.Ref<T>, ref);
 
   return (
-    <Base {...(mergedProps as any)} ref={mergeRefs(childRef as React.Ref<T>, ref) as any} />
+    <Base {...(mergedProps as any)} />
   );
 }
 
