@@ -120,7 +120,9 @@ async function fetchSafe(url) {
 }
 
 function extractJson(js) {
-  const match = js.match(/^\s*(?:let|var|const)\s+\w+\s*=\s*(\{[\s\S]*?\});\s*$/)
+  // Strip leading JS block comment (added by uNmINeD)
+  const stripped = js.replace(/^\/\*[\s\S]*?\*\/\s*/, "")
+  const match = stripped.match(/^\s*(?:let|var|const)\s+\w+\s*=\s*(\{[\s\S]*?\});\s*$/)
   if (!match) throw new Error("Unrecognized JS format")
   const raw = match[1]
 
