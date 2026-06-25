@@ -17,6 +17,13 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", "font-sans", figtree.variable, outfitHeading.variable)}
     >
+      <head>
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "710a9e1d192a4184a5e66d4764ad5f1f"}'
+        />
+      </head>
       <body>
         <ThemeProvider>
           <div className="flex min-h-svh flex-col">
