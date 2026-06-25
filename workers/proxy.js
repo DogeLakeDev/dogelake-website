@@ -108,9 +108,15 @@ async function handleUnminedData() {
 }
 
 async function fetchSafe(url) {
-  const res = await fetch(url)
-  if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`)
-  return res.text()
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), 5000)
+  try {
+    const res = await fetch(url, { signal: controller.signal })
+    if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`)
+    return res.text()
+  } finally {
+    clearTimeout(timer)
+  }
 }
 
 function extractJson(js) {
